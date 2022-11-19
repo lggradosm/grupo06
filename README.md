@@ -9,7 +9,7 @@
 <ul style="list-style:none; display:flex; gap:20px; flex-wrap:wrap;"> 
     <li style="cursor:pointer;">
         <a href="https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b/">
-            <img src="./assets/img/readme/gabriel.jpg" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
+            <img src="" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
             <p style="color:#0473af;text-align:center;">Luis Gabriel Grados Machado</p>
         </a>
     </li>
