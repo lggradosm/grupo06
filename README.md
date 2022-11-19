@@ -5,4 +5,4 @@ Información del proyecto:
 
 
 El equipo:
-<a src="google.com">Luis Gabriel Grados Machado</a>
+<a href="google.com">Luis Gabriel Grados Machado</a>
