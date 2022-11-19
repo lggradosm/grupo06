@@ -1,34 +1,13 @@
-<h1>Grupo 06</h1>
+![alt text](./assets/img/abstract-futuristic-background.jpg)
 
-<h2>Grupo 06 del curso Código by Tecsup</h2>
+# **Grupo 06**
 
-<h3>Información del proyecto: </h3>
+## Grupo 06 del curso Código by Tecsup
 
-<h3>Nuestro equipo: </h3>
+### Información del proyecto:
 
-<ul style="list-style:none; display:flex; gap:20px; flex-wrap:wrap;"> 
-    <li style="cursor:pointer;">
-        <a href="https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b/">
-            <img src="" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
-            <p style="color:#0473af;text-align:center;">Luis Gabriel Grados Machado</p>
-        </a>
-    </li>
-    <li style="cursor:pointer;">
-        <a href="https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b/">
-            <img src="" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
-            <p style="color:#0473af;text-align:center;">Fernando Castillo</p>
-        </a>
-    </li>
-    <li style="cursor:pointer;">
-        <a href="https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b/">
-            <img src="" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
-            <p style="color:#0473af;text-align:center;">Daniel García</p>
-        </a>
-    </li>
-     <li style="cursor:pointer;">
-        <a href="https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b/">
-            <img src="" width=160 style="border-radius:50%; filter:grayscale(100%); text-align:center;" /> 
-            <p style="color:#0473af;text-align:center;">Daniel García</p>
-        </a>
-    </li>
-</ul>
+### Nuestro equipo:
+
+- [Luis Gabriel Grados Machado](https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b)
+- [Fernando Castillo]()
+- [Daniel García]()
