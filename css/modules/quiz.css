@@ -44,6 +44,7 @@
   flex: 1 1 0px;
   width: 0;
   border-radius: var(--primary-border-radius);
+  box-sizing: border-box;
 }
 .options__indicator {
   position: absolute;
@@ -56,6 +57,11 @@
   padding: 0;
   height: 100vh;
   width: 100vw;
+}
+.quiz__counter {
+  font-size: 4rem;
+  position: absolute;
+  right: var(--padding-container);
 }
 .quiz__body {
   height: 100%;
@@ -75,4 +81,15 @@
   .options__item {
     width: 100%;
   }
+}
+
+.options__item--selected {
+  border: 3px solid white;
+}
+
+.options__item--successfull {
+  background-color: green !important;
+}
+.options__item--wrong {
+  background-color: red !important;
 }
