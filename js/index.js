@@ -1,6 +1,5 @@
 import { questions } from "./questions.js";
 
-console.log(questions);
 const $ = (id) => document.getElementById(id);
 
 const $answers = $("answers");
@@ -8,18 +7,27 @@ const $question = $("question");
 let selectedQuestion = questions[0];
 $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 let answersHtml = "";
-
-const clickHandler = () => {
+let $options = $("options");
+const clickHandler = (e) => {
   console.log("hola");
 };
-let $option = $("option");
 
 selectedQuestion.answers.map((answer, index) => {
-  answersHtml += `<li id="option" class="options__item f-elements f-elements--center">
+  answersHtml += `<li id="options${
+    index + 1
+  }" class="options__item f-elements f-elements--center">
     <div class="options__indicator">${index + 1}</div>
     <p class="options__item-answer">${answer.option}</p>
   </li>`;
-  $option = $("option");
 });
 $answers.innerHTML = answersHtml;
-$option.addEventListener("click", () => console.log("hola"));
+$options = document
+  .getElementById("answers")
+  .getElementsByClassName("options__item");
+console.log(options);
+$options.map((option, index) => {
+  console.log(index);
+});
+$options.addEventListener("click", (e) => clickHandler(e), false);
+// $answers.outerwiHTML = `<ul class="options f-elements f-elements--gap-20" id="answers">
+// ${answersHtml}</ul>`;

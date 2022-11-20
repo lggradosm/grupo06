@@ -23,3 +23,12 @@
 .f-elements--justify-beetween {
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .container {
+    --padding-container: 40px;
+    padding: var(--padding-container);
+
+    --max-width-container: 100%;
+  }
+}
