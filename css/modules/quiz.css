@@ -70,6 +70,18 @@
   height: 100%;
   font-size: 1.6rem;
 }
+
+.quiz__result {
+  height: 100px;
+  text-align: center;
+  font-size: 4rem;
+}
+.quiz__result--successfull {
+  color: green;
+}
+.quiz__result--wrong {
+  color: red;
+}
 .options__item-answer {
   text-align: center;
 }
@@ -80,6 +92,14 @@
   }
   .options__item {
     width: 100%;
+  }
+  .quiz__result {
+    padding: 30px 0;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .quiz__question {
+    height: 300px;
   }
 }
 

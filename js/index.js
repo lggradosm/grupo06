@@ -5,6 +5,7 @@ const $ = (id) => document.getElementById(id);
 const $answers = $("answers");
 const $question = $("question");
 const $counter = $("counter");
+const $result = $("result");
 
 let selectedQuestion = questions[0];
 $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
@@ -29,7 +30,6 @@ $counter.innerHTML = `${count}`;
 setInterval(() => {
   if (count > 0 && activeTimer) {
     count--;
-    console.log(count);
     $counter.innerHTML = `${count}`;
   } else {
     disableButtons();
@@ -59,13 +59,29 @@ const showWrongAnswer = (index) => {
 
 const disableButtons = () => (activeOptions = false);
 
+const successfull = (index) => {
+  addSuccessfullStyle(index);
+  showResult("CORRECTO");
+  $result.classList.add("quiz__result--successfull");
+};
+
+const wrong = (index) => {
+  showWrongAnswer(index);
+  showResult("INCORRECTO");
+  $result.classList.add("quiz__result--wrong");
+};
+
+const showResult = (text) => {
+  $result.innerHTML = text;
+};
+
 // HANDLER FUNCTIONS
 const clickHandler = (index) => {
   if (activeOptions) {
     activeTimer = false;
     selectedQuestion.answers[index].isCorrect
-      ? addSuccessfullStyle(index)
-      : showWrongAnswer(index);
+      ? successfull(index)
+      : wrong(index);
     disableButtons();
   }
 };
