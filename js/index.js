@@ -6,14 +6,16 @@ const $answers = $("answers");
 const $question = $("question");
 const $counter = $("counter");
 const $result = $("result");
-console.log(questions.length);
 const rand = Math.floor(Math.random() * questions.length - 1) + 1;
-let selectedQuestion = questions[rand];
-$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
-let answersHtml = "";
+const selectedQuestion = questions[rand];
+const $options = document.querySelectorAll("#options");
 
+let answersHtml = "";
 let activeOptions = true;
 let activeTimer = true;
+let timerCounter = 15;
+
+//ADD ANSWERS LIST TO HTML
 
 selectedQuestion.answers.map((answer, index) => {
   answersHtml += `<li id="options" class="options__item f-elements f-elements--center">
@@ -22,30 +24,37 @@ selectedQuestion.answers.map((answer, index) => {
   </li>`;
 });
 
+// ADD HTML TO THE ELEMENTS
+
 $answers.innerHTML = answersHtml;
-const $options = document.querySelectorAll("#options");
+$counter.innerHTML = `${timerCounter}`;
+$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 
-let count = 10;
+// TIMER
 
-$counter.innerHTML = `${count}`;
 setInterval(() => {
-  if (count > 0 && activeTimer) {
-    count--;
-    $counter.innerHTML = `${count}`;
+  if (timerCounter > 0 && activeTimer) {
+    timerCounter--;
+    $counter.innerHTML = `${timerCounter}`;
   } else {
     disableButtons();
     showSuccessfullAnswer();
   }
 }, 1000);
 
+// ADD STYLES 
+
 const addSuccessfullStyle = (index) => {
   $options[index].classList.add("options__item--selected");
   $options[index].classList.add("options__item--successfull");
 };
+
 const addWrongStyle = (index) => {
   $options[index].classList.add("options__item--selected");
   $options[index].classList.add("options__item--wrong");
 };
+
+// SHOW CORRECT RESPONSE WHEN IS WRONG OR TIMEOUT
 
 const showSuccessfullAnswer = () => {
   selectedQuestion.answers.map((answer, index) => {
@@ -58,7 +67,10 @@ const showWrongAnswer = (index) => {
   showSuccessfullAnswer();
 };
 
+// DISABLE BUTTONS 
 const disableButtons = () => (activeOptions = false);
+
+// SUCCESSFULL OR WRONG RESULT
 
 const successfull = (index) => {
   addSuccessfullStyle(index);
@@ -92,7 +104,7 @@ const keydownHandler = (value) => {
     clickHandler(value - 1);
 };
 
-// EVENTS
+// EVENT LISTENERS
 
 document.addEventListener("keydown", (event) => keydownHandler(event.key));
 
