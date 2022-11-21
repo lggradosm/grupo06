@@ -23,10 +23,12 @@ selectedQuestion.answers.map((answer, index) => {
     <p class="options__item-answer">${answer.option}</p>
   </li>`;
 });
+
 // ADD HTML TO THE ELEMENTS
-$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
+
 $answers.innerHTML = answersHtml;
 $counter.innerHTML = `${timerCounter}`;
+$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 
 // TIMER
 
@@ -40,7 +42,7 @@ setInterval(() => {
   }
 }, 1000);
 
-// STYLES
+// ADD STYLES 
 
 const addSuccessfullStyle = (index) => {
   $options[index].classList.add("options__item--selected");
@@ -67,8 +69,7 @@ const showWrongAnswer = (index) => {
 };
 
 
-
-// SUCCESSFULL AND WRONG RESULTS
+// SUCCESSFULL OR WRONG RESULT
 
 const successfull = (index) => {
   addSuccessfullStyle(index);
