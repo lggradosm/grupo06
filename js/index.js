@@ -6,7 +6,6 @@ const $answers = $("answers");
 const $question = $("question");
 const $counter = $("counter");
 const $result = $("result");
-const $options = document.querySelectorAll("#options");
 const rand = Math.floor(Math.random() * questions.length - 1) + 1;
 const selectedQuestion = questions[rand];
 
