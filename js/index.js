@@ -8,7 +8,6 @@ const $counter = $("counter");
 const $result = $("result");
 const rand = Math.floor(Math.random() * questions.length - 1) + 1;
 const selectedQuestion = questions[rand];
-const $options = document.querySelectorAll("#options");
 
 let answersHtml = "";
 let activeOptions = true;
@@ -27,6 +26,7 @@ selectedQuestion.answers.map((answer, index) => {
 // ADD HTML TO THE ELEMENTS
 
 $answers.innerHTML = answersHtml;
+const $options = document.querySelectorAll("#options");
 $counter.innerHTML = `${timerCounter}`;
 $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 
