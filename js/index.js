@@ -27,6 +27,7 @@ selectedQuestion.answers.map((answer, index) => {
 // ADD HTML TO THE ELEMENTS
 
 $answers.innerHTML = answersHtml;
+const $options = document.querySelectorAll("#options");
 $counter.innerHTML = `${timerCounter}`;
 $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 
