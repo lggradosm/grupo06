@@ -6,14 +6,16 @@ const $answers = $("answers");
 const $question = $("question");
 const $counter = $("counter");
 const $result = $("result");
-console.log(questions.length);
+const $options = document.querySelectorAll("#options");
 const rand = Math.floor(Math.random() * questions.length - 1) + 1;
-let selectedQuestion = questions[rand];
-$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
-let answersHtml = "";
+const selectedQuestion = questions[rand];
 
+let answersHtml = "";
 let activeOptions = true;
 let activeTimer = true;
+let timerCounter = 15;
+
+// GENERATE HTML TO THE ANSWERS
 
 selectedQuestion.answers.map((answer, index) => {
   answersHtml += `<li id="options" class="options__item f-elements f-elements--center">
@@ -21,31 +23,37 @@ selectedQuestion.answers.map((answer, index) => {
     <p class="options__item-answer">${answer.option}</p>
   </li>`;
 });
-
+// ADD HTML TO THE ELEMENTS
+$question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 $answers.innerHTML = answersHtml;
-const $options = document.querySelectorAll("#options");
+$counter.innerHTML = `${timerCounter}`;
 
-let count = 10;
+// TIMER
 
-$counter.innerHTML = `${count}`;
 setInterval(() => {
-  if (count > 0 && activeTimer) {
-    count--;
-    $counter.innerHTML = `${count}`;
+  if (timerCounter > 0 && activeTimer) {
+    timerCounter--;
+    $counter.innerHTML = `${timerCounter}`;
   } else {
     disableButtons();
     showSuccessfullAnswer();
   }
 }, 1000);
 
+// STYLES
+
 const addSuccessfullStyle = (index) => {
   $options[index].classList.add("options__item--selected");
   $options[index].classList.add("options__item--successfull");
 };
+
 const addWrongStyle = (index) => {
   $options[index].classList.add("options__item--selected");
   $options[index].classList.add("options__item--wrong");
 };
+
+
+// SHOW SUCCESSFULL ANSWER WHEN TIMEOUT OR WRONG RESPONSE
 
 const showSuccessfullAnswer = () => {
   selectedQuestion.answers.map((answer, index) => {
@@ -58,7 +66,9 @@ const showWrongAnswer = (index) => {
   showSuccessfullAnswer();
 };
 
-const disableButtons = () => (activeOptions = false);
+
+
+// SUCCESSFULL AND WRONG RESULTS
 
 const successfull = (index) => {
   addSuccessfullStyle(index);
@@ -76,6 +86,10 @@ const showResult = (text) => {
   $result.innerHTML = text;
 };
 
+// DISABLE BUTTONS
+
+const disableButtons = () => (activeOptions = false);
+
 // HANDLER FUNCTIONS
 const clickHandler = (index) => {
   if (activeOptions) {
@@ -92,7 +106,7 @@ const keydownHandler = (value) => {
     clickHandler(value - 1);
 };
 
-// EVENTS
+// EVENT LISTENERS
 
 document.addEventListener("keydown", (event) => keydownHandler(event.key));
 

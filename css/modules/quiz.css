@@ -70,7 +70,8 @@
 }
 .quiz__question {
   height: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
   padding: 20px 0;
 }
 
