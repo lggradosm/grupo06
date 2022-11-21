@@ -6,8 +6,9 @@ const $answers = $("answers");
 const $question = $("question");
 const $counter = $("counter");
 const $result = $("result");
-
-let selectedQuestion = questions[0];
+console.log(questions.length);
+const rand = Math.floor(Math.random() * questions.length - 1) + 1;
+let selectedQuestion = questions[rand];
 $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
 let answersHtml = "";
 

@@ -13,9 +13,10 @@
   justify-content: center;
 }
 
-.f-elements--gap-20 {
-  gap: 20px;
+.f-elements--gap {
+  gap: var(--padding-container);
 }
+
 .f-elements--col {
   flex-direction: column;
 }
@@ -30,5 +31,8 @@
     padding: var(--padding-container);
 
     --max-width-container: 100%;
+  }
+  .f-elements--gap {
+    gap: calc(var(--padding-container) * 0.3);
   }
 }
