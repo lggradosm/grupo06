@@ -1,5 +1,5 @@
 .section {
-    padding-top: var(--padding-section);
+    padding-top: 3rem;
     padding-bottom: var(--padding-section);
 }
 
@@ -7,7 +7,7 @@
     /*background-image: ;*/
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 50vh;
     box-sizing: border-box;
 }
 
