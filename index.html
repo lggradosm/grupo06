@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quizziz</title>
-  <link rel="stylesheet" href="css/index.css" />
+
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,14 +15,18 @@
     rel="stylesheet" />
 </head>
 
-<body>
-  <header>
-    <nav>
-      <div>
+<body class="body">
+  <header class="header">
+    <nav class="nav" id="header-nav">
+      <div class="container f-elements f-elements--header p-relative">
         <a href="hero">
-          Quizziz
+          <h2 class="nav_logo">Quizziz</h2>
         </a>
-        <ul>
+        <a href="#header-nav" class="nav__icon nav__icon--menu">
+          <i class="bi bi-list"></i></a>
+        <a href="#header-close" class="nav__icon nav__icon--close">
+          <i class="bi bi-x-circle"></i></a>
+        <ul class="list list--header f-elements f-elements--center f-direction-column md:f-direction-row gap-md ">
           <li><a href="#hero"></a>Perfil</li>
           <li><a href="#planes"></a>Planes</li>
           <li><a href="#recursos"></a>Recursos</li>
@@ -31,9 +37,9 @@
   </header>
 
   <main>
-    <article>
-      <div>
-        <div>
+    <article id="hero" >
+      <div >
+        <div class="flex-1">
           <header>
             <h1>Importa</h1>
           </header>
@@ -60,8 +66,9 @@
         </div>
       </div>
     </article>
-    <section>
-      <div>
+    <section class="section section--hero f-elements f-elements--center" >
+      <div class="container f-elements f-elements--center f-elements--responsive">
+      <div class="flex-1">
         <div>
           <h2>Vea por qué a los administradores les encanta Quizizz para sus profesores y alumnos</h2>
         </div>
@@ -69,22 +76,22 @@
           <a href=""></a>
         </div>
       </div>
-
-      <div>
+      <div class="flex-1 f-elements f-elementes--center">
         <figure>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="./assets/img/facebook-svgrepo-com.svg" alt="Facebook" width="48">
+          <img src="./assets/img/linkedin-svgrepo-com.svg" alt="LinkedIn" width="48">
+          <img src="./assets/img/youtube-svgrepo-com.svg" alt="Youtube" width="48">
           <img src="" alt="">
           <img src="" alt="">
           <img src="" alt="">
         </figure>
       </div>
+      </div>
     </section>
   </main>
   <footer>
     <nav>
-      <table>
+      <table width="100%">
         <thead>
           <tr>
             <th></th>
@@ -96,7 +103,7 @@
         <tbody>
           <tr>
             <td>
-             <h3>Quizizz</h3> 
+              <h3>Quizizz</h3>
             </td>
             <td>
               <ul>
@@ -134,18 +141,14 @@
         <tfoot>
           <tr>
             <td colspan="4">
-                    <h5>
-        copyright &copy;
-        Todos los derechos reservados
-      </h5>
+              <h5>
+                copyright &copy;
+                Todos los derechos reservados
+              </h5>
             </td>
           </tr>
         </tfoot>
       </table>
-      <h5>
-        copyright &copy;
-        Todos los derechos reservados
-      </h5>
     </nav>
 
 
