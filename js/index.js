@@ -7,7 +7,9 @@ const $question = $("question");
 const $counter = $("counter");
 const $result = $("result");
 const $indicator = $("indicator");
-const TIME_TIMER = 4;
+const TIME_TIMER = 15;
+
+const OUT_OF_TIME_RANGE = -1;
 
 let questionsLenght = questions.length;
 let rand = null;
@@ -23,10 +25,11 @@ setInterval(() => {
 
   if (timerCounter >= 0 && activeTimer) {
     $counter.innerHTML = `${timerCounter}`;
-  } else {
+  }
+  if (timerCounter === OUT_OF_TIME_RANGE) {
     showSuccessfullAnswer();
     disableButtons();
-    if (timerCounter === -1) nextQuestion();
+    nextQuestion();
   }
 }, 1000);
 
