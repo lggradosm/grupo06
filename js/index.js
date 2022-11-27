@@ -38,6 +38,7 @@ setInterval(() => {
 document.addEventListener("keydown", (event) => keydownHandler(event.key));
 
 const createButtonsEvent = () => {
+  $options = document.querySelectorAll("#options");
   $options.forEach(($option, index) =>
     $option.addEventListener("click", () => clickHandler(index))
   );
@@ -53,36 +54,43 @@ const resetResultStyles = () => {
 const init = () => {
   activeTimer = true;
   timerCounter = TIME_TIMER;
-
-  $counter.innerHTML = `${timerCounter}`;
-
-  rand = Math.floor(Math.random() * questionsLenght - 1) + 1;
-  selectedQuestion = questions[rand];
-  questions.splice(rand, 1);
-  answersHtml = "";
-  questionsLenght--;
-  $result.innerHTML = "";
   activeOptions = true;
-  renderOptions();
-  $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
-  $answers.innerHTML = answersHtml;
-  $options = document.querySelectorAll("#options");
+  selectQuestion();
+  renderQuiz();
   createButtonsEvent();
   resetResultStyles();
 };
 
+const renderQuiz = () => {
+  $counter.innerHTML = `${timerCounter}`;
+  $result.innerHTML = "";
+  renderQuestion();
+  renderOptions();
+};
+
+const selectQuestion = () => {
+  rand = Math.floor(Math.random() * questionsLenght - 1) + 1;
+  selectedQuestion = questions[rand];
+  questions.splice(rand, 1);
+  questionsLenght--;
+};
+
+//ADD ANSWERS LIST TO HTML
+
 const renderOptions = () => {
+  answersHtml = "";
   selectedQuestion.answers.map((answer, index) => {
     answersHtml += `<li id="options" class="options__item f-elements f-elements--center">
       <div class="options__indicator">${index + 1}</div>
       <p class="options__item-answer">${answer.option}</p>
     </li>`;
   });
+  $answers.innerHTML = answersHtml;
 };
 
-init();
-
-//ADD ANSWERS LIST TO HTML
+const renderQuestion = () => {
+  $question.innerHTML = `<p>${selectedQuestion.question}</p>`;
+};
 
 // ADD HTML TO THE ELEMENTS
 
@@ -130,16 +138,18 @@ const wrong = (index) => {
   $result.classList.add("quiz__result--wrong");
 };
 
+const showResult = (text) => {
+  $result.innerHTML = text;
+};
+
+//NEXT QUESTION
+
 const nextQuestion = () => {
   $indicator.classList.add("quiz__indicator");
   setTimeout(() => {
     $indicator.classList.remove("quiz__indicator");
     init();
   }, 5000);
-};
-
-const showResult = (text) => {
-  $result.innerHTML = text;
 };
 
 // HANDLER FUNCTIONS
@@ -157,3 +167,5 @@ const keydownHandler = (value) => {
   if (value == 1 || value == 2 || value == 3 || value == 4)
     clickHandler(value - 1);
 };
+
+init();
