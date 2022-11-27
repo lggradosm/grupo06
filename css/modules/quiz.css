@@ -77,11 +77,28 @@
 .quiz__result {
   height: 50px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .quiz__result--successfull {
   color: green;
 }
+
+@keyframes t-width {
+  to {
+    width: 0px;
+  }
+}
+
+.quiz__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: t-width 5.2s;
+  height: 2px;
+  background-color: red;
+}
+
 .quiz__result--wrong {
   color: red;
 }
