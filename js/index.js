@@ -57,11 +57,8 @@ const init = () => {
   activeTimer = true;
   timerCounter = TIME_TIMER;
   activeOptions = true;
-  $result.innerHTML = "";
-  $counter.innerHTML = `${timerCounter}`;
   selectQuestion();
-  renderQuestion();
-  renderOptions();
+  renderQuiz();
   createButtonsEvent();
   resetResultStyles();
 };
@@ -72,6 +69,14 @@ const selectQuestion = () => {
   questions.splice(rand, 1);
   questionsLenght--;
 };
+
+const renderQuiz = () => {
+  $counter.innerHTML = `${timerCounter}`;
+  $result.innerHTML = "";
+  renderQuestion();
+  renderOptions();
+};
+//ADD ANSWERS LIST TO HTML
 
 const renderOptions = () => {
   answersHtml = "";
@@ -132,6 +137,10 @@ const wrong = (index) => {
   $result.classList.add("quiz__result--wrong");
 };
 
+const showResult = (text) => {
+  $result.innerHTML = text;
+};
+
 //NEXT QUESTION
 
 const nextQuestion = () => {
@@ -140,10 +149,6 @@ const nextQuestion = () => {
     $indicator.classList.remove("quiz__indicator");
     init();
   }, 5000);
-};
-
-const showResult = (text) => {
-  $result.innerHTML = text;
 };
 
 // HANDLER FUNCTIONS
