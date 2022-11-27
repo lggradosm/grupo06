@@ -105,7 +105,7 @@ const addWrongStyle = (index) => {
   $options[index].classList.add("options__item--wrong");
 };
 
-// SHOW CORRECT RESPONSE WHEN IS WRONG OR TIMEOUT
+// SHOW SUCCESSFULL ANSWER WHEN TIMEOUT OR WRONG RESPONSE
 
 const showSuccessfullAnswer = () => {
   selectedQuestion.answers.map((answer, index) => {
