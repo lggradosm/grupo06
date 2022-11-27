@@ -78,13 +78,29 @@
 .quiz__result {
   height: 50px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+@keyframes t-width {
+  to {
+    width: 0px;
+  }
+}
+
+.quiz__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: t-width 5.2s;
+  height: 3px;
+  background-color: #a8a8a8;
 }
 .quiz__result--successfull {
-  color: green;
+  color: #62c471;
 }
 .quiz__result--wrong {
-  color: red;
+  color: #e53945;
 }
 .options__item-answer {
   text-align: center;
@@ -111,6 +127,7 @@
     font-size: 0.6rem;
   }
   .quiz__question {
+    text-align: center;
     height: 300px;
     padding-bottom: 0;
   }
