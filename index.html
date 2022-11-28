@@ -27,22 +27,24 @@
         <a href="#header-close" class="nav__icon nav__icon--close">
           <i class="bi bi-x-circle"></i></a>
         <ul class="list list--header f-elements f-elements--center f-direction-column md:f-direction-row gap-md ">
-          <li><a href="#hero"></a>Perfil</li>
-          <li><a href="#planes"></a>Planes</li>
-          <li><a href="#recursos"></a>Recursos</li>
-          <li><a href="#juego"></a>Juega ahora</li>
+          <li><a href="#hero" class="list__link"></a>Perfil</li>
+          <li><a href="#planes"class="list__link" ></a>Planes</li>
+          <li><a href="#recursos" class="list__link"></a>Recursos</li>
+          <li><a href="#juego" class="list__link"></a>Juega ahora</li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main>
-    <article id="hero" class="section section--hero f-elements f-elementes--center">
-      <div class="container f-elements f-elements--center f-elements--responsive">
+    <article id="hero" class="section f-elements">
+      <div class="container f-elements f-elements--responsive">
         <div class="flex-1">
           <header>
-            <h1>Importa</h1>
+            <h1 class="titulo">Importa como preguntas</h1>
+            
           </header>
+          <div></div>
           <section>
             <p>
               Evaluación, instrucción y práctica que motivan a cada estudiante a dominar
@@ -50,37 +52,44 @@
           </section>
 
         </div>
-        <div>
-          <a href="">Regístrate gratis</a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">Aprende más</a>
-          <footer>
+        <div class="boton">
+          <a class="boton--1" href="">Regístrate gratis</a>
+          <a class="boton--1" href="http://" target="_blank" rel="noopener noreferrer">Aprende más</a>
+          
+        </div>
+        <footer class="f-elements--center">
             <div>
               <p>
                 Utilizado por más de 50 millones de personas alrededor del mundo
               </p>
             </div>
           </footer>
-        </div>
         <div>
           <img src="" alt="">
         </div>
       </div>
     </article>
     <section class="section section--hero f-elements f-elements--center" >
-      <div class="container f-elements f-elements--center f-elements--responsive">
+      <div class="container f-elements f-elements--center f-elements--iconos">
       <div class="flex-1">
         <div>
-          <h2>Vea por qué a los administradores les encanta Quizizz para sus profesores y alumnos</h2>
+          <h2> Vea por qué a los <br>
+            administradores les <br>
+            encanta Quizizz para sus <br>
+            profesores y alumnos</h2>
+        </div>
+        <div class="botonbajo">
+          <a class="boton--2" href="">Prueba el juego</a>
         </div>
         <div>
           <a href=""></a>
         </div>
       </div>
-      <div class="flex-1 f-elements f-elementes--center">
-        <figure>
-          <img src="./assets/img/facebook-svgrepo-com.svg" alt="Facebook" width="48">
-          <img src="./assets/img/linkedin-svgrepo-com.svg" alt="LinkedIn" width="48">
-          <img src="./assets/img/youtube-svgrepo-com.svg" alt="Youtube" width="48">
+      <div>
+        <figure >
+          <img class="f-elements--main" src="./assets/img/facebook-svgrepo-com.svg" alt="Facebook" width="48">
+          <img class="f-elements--main" src="./assets/img/linkedin-svgrepo-com.svg" alt="LinkedIn" width="48">
+          <img class="f-elements--main" src="./assets/img/youtube-svgrepo-com.svg" alt="Youtube" width="48">
           <img src="" alt="">
           <img src="" alt="">
           <img src="" alt="">
@@ -89,7 +98,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="f-elements--footer">
     <nav>
       <table width="100%">
         <thead>
