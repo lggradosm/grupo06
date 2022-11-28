@@ -12,11 +12,12 @@
   --reverse-secondary-shadow-color: #00000040;
   --primary-highlight-color: #61dafb;
   --secondary-highlight-color: gold;
-  --primary-button-color: #61dafb;
+  --primary-button-color: #62c471;
   --secondary-button-color: gold;
-  --primary-font-family: "Roboto", sans-serif;
+  --primary-font-family: "Open Sans", sans-serif;
   --max-width-container: 1024px;
   --padding-section: 1.5rem;
   --padding-container: 1rem;
   --primary-border-radius: 0.5rem;
+  --translateY-header: -150%;
 }

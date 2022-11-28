@@ -1,16 +1,82 @@
+.section {
+  margin-top: 100px;
+  padding-bottom: var(--padding-section);
+}
+
+.section--hero {
+  background-image: url("/assets/img/abstract-futuristic-background.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+  box-sizing: border-box;
+}
+
 .container {
   max-width: var(--max-width-container);
   margin: 0 auto;
-  padding-left: var(--padding-container);
-  padding-right: var(--padding-container);
+  padding-left: var(--padding-container) !important;
+  padding-right: var(--padding-container) !important;
 }
-.f-elements {
-  display: flex;
+.quizz__container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0 40px !important;
 }
 
-.f-elements--center {
-  align-items: center;
+.titulo {
+  text-align: center;
+  font-size: 40px;
+}
+
+.titulo2 {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 40px;
+  padding-top: 0px;
+}
+
+.boton {
+  padding-top: 50px;
+  margin-top: 100 px;
+  margin-bottom: 40px;
+  display: flex;
+  grid-column: 50 px;
+  width: 90%;
+  justify-content: space-around;
+  gap: 10 px;
+}
+.boton--1 {
+  display: flex;
+  padding: 15px;
+
+  flex-direction: column;
+  background-color: var(--primary-button-color);
+  border-radius: 8px;
+  color: white;
   justify-content: center;
+}
+
+.botonbajo {
+  padding-top: 50px;
+  margin-top: 100 px;
+  margin-bottom: 40px;
+  display: flex;
+  grid-column: 50 px;
+  width: 90%;
+  justify-content: center;
+  gap: 10 px;
+}
+.boton--2 {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  background-color: var(--primary-button-color);
+  border-radius: 8px;
+  color: white;
+}
+
+.f-elements {
+  display: flex;
 }
 
 .f-elements--gap {
@@ -25,14 +91,55 @@
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .container {
-    --padding-container: 40px;
-    padding: var(--padding-container);
+.f-elements--header {
+  align-items: center;
+  justify-content: space-between;
+}
 
+.f-elements--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.f-elements--main {
+  padding-right: 20px;
+}
+
+.f-elements--footer {
+  text-align: center;
+  padding-top: 20px;
+}
+.f-elements--responsive {
+  flex-direction: column;
+}
+
+.f-elements--iconos {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .f-elements--responsive {
+    flex-direction: column;
+  }
+  .f-elements--iconos {
+    flex-direction: row;
+  }
+  .container {
+    /* --padding-container: 40px; */
     --max-width-container: 100%;
   }
   .f-elements--gap {
-    gap: calc(var(--padding-container) * 0.3);
+    gap: calc(var(--padding-container) * 0.2);
+  }
+  .quizz__container {
+    --padding-container: 100px;
+    padding: var(--padding-container);
+    --max-width-container: 100%;
   }
 }
+/* @media (max-width: 768px) {
+    .container {
+      
+    }
+    
+} */

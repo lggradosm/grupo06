@@ -70,7 +70,7 @@
 }
 .quiz__question {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   padding: 20px 0;
 }
@@ -104,6 +104,7 @@
 }
 .options__item-answer {
   text-align: center;
+  font-size: 1rem !important;
   width: 80%;
 }
 @media (max-width: 768px) {
@@ -121,7 +122,7 @@
   .quiz__result {
     padding: 30px 0;
     height: 50px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .options__indicator {
     font-size: 0.6rem;
