@@ -7,9 +7,8 @@
 ### Información del proyecto:
 
 Este proyecto fue realizado para poner en práctica lo realizado en las tres semanas del curso.
-El proyecto consta de una página principal, una página de precios del servicio y otra de un juego de preguntas sobre css y html.
 
-El proyecto consta de una página principal y un juego de preguntas sobre HTML y CSS.
+El proyecto consta de una página principal, una página de precios del servicio y otra de un juego de preguntas sobre css y html.
 
 ### Nuestro equipo:
 
