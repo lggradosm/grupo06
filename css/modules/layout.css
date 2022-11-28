@@ -4,7 +4,7 @@
 }
 
 .section--hero {
-  background-image: url("/assets/img/abstract-futuristic-background.jpg");
+  background-image: url("../../assets/img/abstract-futuristic-background.jpg");
   background-position: center;
   background-size: cover;
   min-height: 50vh;
