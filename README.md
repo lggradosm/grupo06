@@ -12,7 +12,6 @@ El proyecto consta de una página principal, una página de precios del servicio
 ### Nuestro equipo:
 
 - [Luis Gabriel Grados Machado](https://www.linkedin.com/in/luis-gabriel-grados-machado-5a839a13b)
-- [Fernando Castillo]()
 - [Daniel García]()
 
 #### **Para clonar el repositorio utiliza:**
