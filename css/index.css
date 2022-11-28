@@ -1,17 +1,19 @@
-@import './modules/variables.css';
-@import './modules/utils.css';
-@import './modules/layout.css';
-@import './modules/header.css';
-@import './modules/nav.css';
-@import './modules/list.css';
-
-.body{
-    background-color: var(--primary-theme-color);
-    color: var(--primary-text-color);
-    font-family: var(--primary-font-family);
-    margin: 0;
+@import "./modules/variables.css";
+@import "./modules/utils.css";
+@import "./modules/layout.css";
+@import "./modules/header.css";
+@import "./modules/nav.css";
+@import "./modules/list.css";
+@import "./modules/footer.css";
+.body {
+  background-color: var(--primary-theme-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+  margin: 0;
+  font-size: 0.7rem;
 }
 
 .main {
-    overflow: hidden;
+  margin-top: 100px;
+  overflow: hidden;
 }

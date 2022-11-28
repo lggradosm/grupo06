@@ -1,168 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizziz</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quizziz</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body class="body">
-  <header class="header">
-    <nav class="nav" id="header-nav">
-      <div class="container f-elements f-elements--header p-relative">
-        <a href="hero">
-          <h2 class="nav_logo">Quizziz</h2>
-        </a>
-        <a href="#header-nav" class="nav__icon nav__icon--menu">
-          <i class="bi bi-list"></i></a>
-        <a href="#header-close" class="nav__icon nav__icon--close">
-          <i class="bi bi-x-circle"></i></a>
-        <ul class="list list--header f-elements f-elements--center f-direction-column md:f-direction-row gap-md ">
-          <li><a href="#hero" class="list__link"></a>Perfil</li>
-          <li><a href="#planes"class="list__link" ></a>Planes</li>
-          <li><a href="#recursos" class="list__link"></a>Recursos</li>
-          <li><a href="#juego" class="list__link"></a>Juega ahora</li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <article id="hero" class="section f-elements">
-      <div class="container f-elements f-elements--responsive">
-        <div class="flex-1">
-          <header>
-            <h1 class="titulo">Importa como preguntas</h1>
-            
-          </header>
-          <div></div>
-          <section>
-            <p>
-              Evaluación, instrucción y práctica que motivan a cada estudiante a dominar
-            </p>
-          </section>
-
+  <body class="body">
+    <header class="header">
+      <nav class="nav" id="header-nav">
+        <div class="container f-elements f-elements--header p-relative">
+          <a href="hero">
+            <h2 class="nav_logo">Quizziz</h2>
+          </a>
+          <a href="#header-nav" class="nav__icon nav__icon--menu">
+            <i class="bi bi-list"></i
+          ></a>
+          <a href="#header-close" class="nav__icon nav__icon--close">
+            <i class="bi bi-x-circle"></i
+          ></a>
+          <ul
+            class="list list--header f-elements f-elements--center f-direction-column md:f-direction-row gap-md"
+          >
+            <li>
+              <a href="#" class="list__link">Perfil</a>
+            </li>
+            <li>
+              <a href="#" class="list__link">Planes</a>
+            </li>
+            <li>
+              <a href="#" class="list__link">Recursos</a>
+            </li>
+            <li>
+              <a href="/quiz" class="list__link">Juega ahora</a>
+            </li>
+          </ul>
         </div>
-        <div class="boton">
-          <a class="boton--1" href="">Regístrate gratis</a>
-          <a class="boton--1" href="http://" target="_blank" rel="noopener noreferrer">Aprende más</a>
-          
-        </div>
-        <footer class="f-elements--center">
+      </nav>
+    </header>
+
+    <main class="main">
+      <article id="hero" class="section f-elements f-elements--center">
+        <div
+          class="container f-elements f-elements--center f-elements--responsive"
+        >
+          <div class="flex-1">
+            <header>
+              <h1 class="titulo">Importa como preguntas</h1>
+            </header>
+
+            <section class="f-elements f-elements--center">
+              <p>
+                Evaluación, instrucción y práctica que motivan a cada estudiante
+                a dominar
+              </p>
+            </section>
+          </div>
+          <div class="boton">
+            <a class="boton--1" href="">Regístrate gratis</a>
+            <a
+              class="boton--1"
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Aprende más</a
+            >
+          </div>
+          <footer class="f-elements--center">
             <div>
               <p>
                 Utilizado por más de 50 millones de personas alrededor del mundo
               </p>
             </div>
           </footer>
-        <div>
-          <img src="" alt="">
+          <div>
+            <img src="" alt="" />
+          </div>
         </div>
-      </div>
-    </article>
-    <section class="section section--hero f-elements f-elements--center" >
-      <div class="container f-elements f-elements--center f-elements--iconos">
-      <div class="flex-1">
-        <div>
-          <h2> Vea por qué a los <br>
-            administradores les <br>
-            encanta Quizizz para sus <br>
-            profesores y alumnos</h2>
+      </article>
+      <section class="section section--hero f-elements f-elements--center">
+        <div
+          class="container f-elements f-elements--center f-elements--iconos gap-md"
+        >
+          <div class="flex-1">
+            <div>
+              <h2>
+                Vea por qué a los <br />
+                administradores les <br />
+                encanta Quizizz para sus <br />
+                profesores y alumnos
+              </h2>
+            </div>
+            <div class="botonbajo">
+              <a class="boton--2" href="">Prueba el juego</a>
+            </div>
+            <div>
+              <a href=""></a>
+            </div>
+          </div>
+          <div>
+            <figure>
+              <img
+                class="f-elements--main"
+                src="./assets/img/facebook-svgrepo-com.svg"
+                alt="Facebook"
+                width="48"
+              />
+              <img
+                class="f-elements--main"
+                src="./assets/img/linkedin-svgrepo-com.svg"
+                alt="LinkedIn"
+                width="48"
+              />
+              <img
+                class="f-elements--main"
+                src="./assets/img/youtube-svgrepo-com.svg"
+                alt="Youtube"
+                width="48"
+              />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+            </figure>
+          </div>
         </div>
-        <div class="botonbajo">
-          <a class="boton--2" href="">Prueba el juego</a>
+      </section>
+    </main>
+    <footer class="footer f-elements--footer">
+      <section class="footer__content f-elements f-elements--center">
+        <div class="flex-1">
+          <h3>Quizizz</h3>
         </div>
-        <div>
-          <a href=""></a>
+        <div class="flex-1">
+          <ul class="list f-elements f-elements--col f-elements--center gap-md">
+            <li><a href="#hero"></a>Perfil</li>
+            <li><a href="#planes"></a>Planes</li>
+            <li><a href="#recursos"></a>Recursos</li>
+            <li><a href="#juego"></a>Juega ahora</li>
+          </ul>
         </div>
-      </div>
-      <div>
-        <figure >
-          <img class="f-elements--main" src="./assets/img/facebook-svgrepo-com.svg" alt="Facebook" width="48">
-          <img class="f-elements--main" src="./assets/img/linkedin-svgrepo-com.svg" alt="LinkedIn" width="48">
-          <img class="f-elements--main" src="./assets/img/youtube-svgrepo-com.svg" alt="Youtube" width="48">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </figure>
-      </div>
-      </div>
-    </section>
-  </main>
-  <footer class="f-elements--footer">
-    <nav>
-      <table width="100%">
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <h3>Quizizz</h3>
-            </td>
-            <td>
-              <ul>
-                <li><a href="#hero"></a>Perfil</li>
-                <li><a href="#planes"></a>Planes</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li><a href="#recursos"></a>Recursos</li>
-                <li><a href="#juego"></a>Juega ahora</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>
-                  <a href="">
-                    <img src="./assets/img/facebook-svgrepo-com.svg" alt="Facebook" width="24" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="./assets/img/linkedin-svgrepo-com.svg" alt="LinkedIn" width="24" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="./assets/img/youtube-svgrepo-com.svg" alt="Youtube" width="24" />
-                  </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="4">
-              <h5>
-                copyright &copy;
-                Todos los derechos reservados
-              </h5>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </nav>
 
+        <div class="flex-1">
+          <ul class="list">
+            <li>
+              <a href="">
+                <img
+                  src="./assets/img/facebook-svgrepo-com.svg"
+                  alt="Facebook"
+                  width="24"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./assets/img/linkedin-svgrepo-com.svg"
+                  alt="LinkedIn"
+                  width="24"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="./assets/img/youtube-svgrepo-com.svg"
+                  alt="Youtube"
+                  width="24"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-  </footer>
-</body>
-<script src="./js/index.js" type="module"></script>
-
+      <h5>copyright &copy; Todos los derechos reservados</h5>
+    </footer>
+  </body>
+  <script src="./js/index.js" type="module"></script>
 </html>
