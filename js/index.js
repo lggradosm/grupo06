@@ -55,8 +55,8 @@ const resetResultStyles = () => {
 
 const init = () => {
   activeTimer = true;
-  timerCounter = TIME_TIMER;
   activeOptions = true;
+  timerCounter = TIME_TIMER;
   selectQuestion();
   renderQuiz();
   createButtonsEvent();
